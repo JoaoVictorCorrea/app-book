@@ -36,4 +36,10 @@ export class BooksComponent {
       price: 18.00
     }
   ];
+
+  saveBook() {
+    this.newBook.id = this.books.length + 1;
+    this.books.push(this.newBook);
+    this.newBook = {} as Book;
+  }
 }
