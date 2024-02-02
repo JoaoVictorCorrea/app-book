@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Book } from '../../book';
 
 @Component({
@@ -8,10 +8,6 @@ import { Book } from '../../book';
 })
 export class BookComponent {
 
-  book: Book = {
-    id: 1,
-    title: "Angular",
-    author: "João Corrêa",
-    price: 50.00
-  };
+  @Input()
+  book: Book = {} as Book;
 }
